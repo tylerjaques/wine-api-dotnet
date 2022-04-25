@@ -18,14 +18,14 @@ public class EventController : ControllerBase
     }
     
     [HttpGet(Name = "GetEvents")]
-    public List<Event> Get()
+    public List<Event> GetEvents()
     {
         return _context.Events.ToList();
     }  
     
-    [HttpGet(Name = "GetEvent")]
-    public Event Get(string code)
-    {
-        return _context.Events.FirstOrDefault(e => e.Code == code);
-    }
+    // [HttpGet(Name = "GetEvent")]
+    // public Event GetEvent(string code)
+    // {
+    //     return _context.Events.FirstOrDefault(e => e.Code == code);
+    // }
 }
